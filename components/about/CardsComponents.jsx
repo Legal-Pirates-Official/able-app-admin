@@ -11,6 +11,7 @@ const CardsComponents = () => {
     });
   }, []);
 
+<<<<<<< HEAD
   return (
     <>
       <View style={styles.container}>
@@ -50,6 +51,35 @@ const CardsComponents = () => {
       </View>
     </>
   );
+=======
+	return (
+		<>
+			<View style={styles.container}>
+				<View style={styles.viewContainer}>
+					<View style={styles.subContainer}></View>
+					<Image
+						style={styles.image}
+						source={{
+							uri: 'https://loveshayariimages.in/wp-content/uploads/2021/10/1080p-Latest-Whatsapp-Profile-Images-1.jpg'
+						}}
+					/>
+					<View>
+						<Text style={styles.text}>Dr.Rajesh Fernando</Text>
+						<Text style={styles.description}>
+							Marian James Rajesh Fernando, VP of Business Development &
+							Training at ACEnovation, was born on the most holy day of all
+							churchgoers, December 25th, bringing joy to his family and all
+							those who have been involved with him in two ways. Rajesh is a
+							trustworthy and kind individual, and those who have had the
+							pleasure of knowing him and working with him appreciate him and
+							want for more people like him.
+						</Text>
+					</View>
+				</View>
+			</View>
+		</>
+	);
+>>>>>>> 3c28a75640e016df2811c0e2c70faf98626ee36a
 };
 
 export default CardsComponents;

@@ -112,7 +112,9 @@ const styles = StyleSheet.create({
 		height: Dimensions.get('window').height / 3.2,
 		width: Dimensions.get('window').width - 50,
 		borderRadius: 10,
-		backgroundColor: '#FF809E',
+		backgroundColor: '#1e1e1e',
+		borderColor: '#336DF5',
+		borderWidth: 2,
 		shadowColor: '#000',
 		shadowOffset: {
 			width: 0,
@@ -130,8 +132,13 @@ const styles = StyleSheet.create({
 		right: 0,
 		// left: -Dimensions.get("window").width / 1.2,
 		borderRadius: 10,
-		backgroundColor: '#B39CD0',
-		margin: 10
+		backgroundColor: '#eeeeee',
+		margin: 10,
+		shadowColor: 'white',
+		shadowOffset: {
+			width: 0,
+			height: 2
+		}
 	},
 
 	imageView: {
@@ -165,7 +172,8 @@ const styles = StyleSheet.create({
 		fontWeight: 'bold',
 		color: 'black',
 		textAlign: 'center',
-		marginTop: 8
+		marginTop: 8,
+		color: 'white'
 	},
 	descriptionText: {
 		fontSize: 16,
