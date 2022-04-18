@@ -21,7 +21,7 @@ const StoriesVideo = ({route}) => {
                 <View>
                     <Video
                         source={{
-                            uri: "https://res.cloudinary.com/prasannarv/video/upload/v1649847316/samples/life-skill-and-value-training-with-illusion-as-a-methodology-prof-rajesh-fernando-gli-india_ye2ytq.mp4",
+                            uri:clip.video_url,
                         }}
                         ref={video}
                         resizeMode="cover"
@@ -35,12 +35,8 @@ const StoriesVideo = ({route}) => {
                     <View style={styles.containerDescription}>
                         <Text style={styles.textTitle}>{clip.title}</Text>
                         <Text style={styles.textDescription}>
-                            {/* {clip.description} */}
-                            Rotary Club of Koothapakkam & Chennai Institute of
-                            Technology jointly conducted Motivation Program for
-                            X th & XII th Students at St.Josephs Matriculation
-                            School, Koothapakkam, Cuddalore. Motivational Speech
-                            by Mr.Rajesh Fernando
+                            {clip.description}
+                            
                         </Text>
                     </View>
                 </ScrollView>
