@@ -84,7 +84,6 @@ function Topnavigation() {
             })}
             tabBarOptions={{
                 onTabPress: (e) => {
-                    console.log(e);
                 },
             }}
         >

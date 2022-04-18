@@ -18,7 +18,6 @@ const AwardsComponents = () => {
 
     useEffect(async () => {
         await getAbout().then((res) => {
-            console.log(res, "awards");
             setAwards(res.data);
         });
     }, []);
@@ -34,7 +33,6 @@ const AwardsComponents = () => {
             />
             {/* {awards &&
                 awards.map((award) => {
-                    console.log(award);
                     return <Card award={award} />;
                 })} */}
         </View>
