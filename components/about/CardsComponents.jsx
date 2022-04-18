@@ -30,7 +30,8 @@ const CardsComponents = () => {
                                 console.log(award, "award");
                                 return (
                                     <Text style={styles.description}>
-                                        {award.about_description}
+                                        {/* {award.about_description} */}
+                                        
                                     </Text>
                                 );
                             })}
@@ -62,7 +63,11 @@ const styles = StyleSheet.create({
         width: Dimensions.get("window").width - 20,
         height: 600,
         bottom: 0,
-        backgroundColor: "tomato",
+        backgroundColor: "rgba(255,255,255,0.15)",
+        elevation: 10,
+        
+        borderWidth: 1,
+        borderColor: "#336DF5",
         alignItems: "center",
         justifyContent: "center",
         borderRadius: 10,

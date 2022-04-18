@@ -14,18 +14,21 @@ import { liveevent, yt } from "../../data/liveevent.data";
 import { aboutget, getEvents, getyoutube } from "../../axios/home.axios";
 import Swipercontainer from "../../components/swipercontainer";
 import Gridcont from "../../components/grid/grid";
-
+import Loading from './Loading'
 // import Swipercont from "../../components/swiper";
 // import {LinearGradient} from 'expo-linear-gradient';
 const { width, height } = Dimensions.get("window");
 
 
 const Home = ({ navigation }) => {
+  setTimeout(() => {
+    setLoading(false);
+  }, 1000);
   const scrollA = useRef(new Animated.Value(0)).current;
   const [about, setAbout] = useState([]);
   const [events, setEvents] = useState([]);
   const [youtube, setYoutube] = useState([]);
-
+  const [loading, setLoading] = useState(true);
   const fetchHomeAbout = () =>
     aboutget()
       .then((res) => {
@@ -61,6 +64,8 @@ const Home = ({ navigation }) => {
   // console.log(youtube+"youtube");
 
   return (
+    <>
+    {loading ? (<Loading/>) : (
     <SafeAreaView style={styles.container}>
       <ScrollView
         style={styles.scrollView}
@@ -98,7 +103,7 @@ const Home = ({ navigation }) => {
           />
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </SafeAreaView>)}</>
   );
 };
 
