@@ -24,20 +24,15 @@ const CardsComponents = () => {
 					/>
 					<View>
 						<Text style={styles.text}>Dr.Rajesh Fernando</Text>
-						{awards &&
-							awards.map((award) => {
-								return (
-									<Text style={styles.description}>
-										Marian James Rajesh Fernando, VP of Business Development &
-										Training at ACEnovation, was born on the most holy day of
-										all churchgoers, December 25th, bringing joy to his family
-										and all those who have been involved with him in two ways.
-										Rajesh is a trustworthy and kind individual, and those who
-										have had the pleasure of knowing him and working with him
-										appreciate him and want for more people like him.
-									</Text>
-								);
-							})}
+						<Text style={styles.description}>
+							Marian James Rajesh Fernando, VP of Business Development &
+							Training at ACEnovation, was born on the most holy day of all
+							churchgoers, December 25th, bringing joy to his family and all
+							those who have been involved with him in two ways. Rajesh is a
+							trustworthy and kind individual, and those who have had the
+							pleasure of knowing him and working with him appreciate him and
+							want for more people like him.
+						</Text>
 					</View>
 				</View>
 			</View>
