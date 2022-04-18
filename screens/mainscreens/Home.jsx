@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
 		borderRadius: 40
 	},
 	areatwo: {
-		height: height / 2.3,
+		height: height / 2.2,
 		alignItems: 'center',
 		justifyContent: 'center'
 	},

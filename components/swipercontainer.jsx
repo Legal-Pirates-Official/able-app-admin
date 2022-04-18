@@ -21,7 +21,8 @@ export default Swipercontainer;
 
 const styles = StyleSheet.create({
 	areatwo: {
-		alignItems: 'center'
+		alignItems: 'center',
+		height: height/2.1,
 	},
 	aboutheadcontainer: {
 		height: 65,
