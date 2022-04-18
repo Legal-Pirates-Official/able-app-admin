@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
 		width: width - 10
 	},
 	abouthead: {
-		color: '#000',
+		color: '#fff',
 		fontSize: 30,
 		fontWeight: 'bold',
 		paddingBottom: 10,
