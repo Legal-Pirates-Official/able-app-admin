@@ -5,7 +5,6 @@ import React, {useEffect} from "react";
 import {auth} from "../../firebase/firebase";
 const Home = ({navigation}) => {
     const handleSubmit = () => {
-        console.log("logout");
         auth.signOut()
             .then(() => {
                 navigation.push("LoginScreen");

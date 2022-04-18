@@ -55,9 +55,6 @@ const Home = ({ navigation }) => {
 	useEffect(() => {
 		fetchYoutube();
 	}, [youtube]);
-	// console.log(events);
-	// console.log(events+"events");
-	// console.log(youtube+"youtube");
 
 	return (
 		<SafeAreaView style={styles.container}>

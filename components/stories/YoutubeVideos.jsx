@@ -13,7 +13,6 @@ import {
 import React, { useState, useEffect } from 'react';
 
 const YoutubeVideos = ({ clips }) => {
-	console.log(clips);
 	return (
 		<View>
 			<Text style={styles.textHeader}>Youtube videos</Text>

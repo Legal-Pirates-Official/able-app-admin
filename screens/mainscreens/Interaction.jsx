@@ -24,15 +24,10 @@ const Interaction = () => {
 	};
 
 	const handleConfirm = (date) => {
-		console.log('A date has been picked: ', date);
 		var strng = date.toLocaleString();
 		setDates(strng.slice(0, strng.indexOf(',')));
-		console.log(dates, 'j');
 		getSlot(strng.slice(0, strng.indexOf(','))).then((res) => {
 			setSlots(JSON.parse(res[0].time_slot));
-			console.log('====================================');
-			console.log(JSON.parse(res[0]));
-			console.log('====================================');
 		});
 		hideDatePicker();
 		setClose(false);
@@ -44,10 +39,6 @@ const Interaction = () => {
 	};
 
 	const handleMail = () => {
-		console.log(email);
-		console.log(name);
-		console.log(dates);
-		console.log(selectedTime);
 		sendMail(email, name, dates, selectedTime, slots).then((res) => {});
 	};
 	return (
@@ -76,7 +67,7 @@ const Interaction = () => {
 						alignSelf: 'center'
 					}}
 				>
-					<Text style={{ fontSize: 30, fontWeight: 'bold', color: '#fff' }}>
+					<Text style={{ fontSize: 26, fontWeight: 'bold', color: '#fff' }}>
 						APPOINTMENT
 					</Text>
 				</View>
@@ -207,9 +198,5 @@ const styles = StyleSheet.create({
 	btn: {
 		textAlign: 'center'
 	},
-	text: {
-		fontSize: 18,
-		fontWeight: 'bold',
-		color: '#fff'
-	}
+	text: { width: '100%', fontSize: 18, fontWeight: 'bold', color: '#fff' }
 });
