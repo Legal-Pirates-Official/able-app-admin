@@ -84,9 +84,9 @@ const styles = StyleSheet.create({
   },
   description: {
     fontSize: 18,
-    color: "black",
-    paddingHorizontal: 20,
-    textAlign: "justify",
+    color: "white",
+    paddingHorizontal: 40,
+    textAlign: "center",
     zIndex: 1,
   },
 });

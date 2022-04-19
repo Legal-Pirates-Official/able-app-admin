@@ -178,7 +178,7 @@ const styles = StyleSheet.create({
 	descriptionText: {
 		fontSize: 16,
 		fontWeight: 'bold',
-		color: 'white',
+		color: 'black',
 		textAlign: 'center',
 		marginVertical: 8,
 		marginLeft: 10

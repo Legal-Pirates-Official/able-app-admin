@@ -22,6 +22,7 @@ const AwardsComponents = () => {
 		});
 	}, []);
 
+	
 	return (
 		<View style={styles.container}>
 			<FlatList

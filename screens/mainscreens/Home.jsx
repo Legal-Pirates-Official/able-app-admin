@@ -37,6 +37,7 @@ const Home = ({ navigation }) => {
   const fetchLiveEvents = () =>
     getEvents().then((res) => {
       setEvents(res.data);
+      console.log(res.data);
     });
 
   const fetchYoutube = () =>
@@ -79,16 +80,17 @@ const Home = ({ navigation }) => {
                 <Text style={styles.abouttext}>{about.description}</Text>
               </View>
             </View>
-            <Swipercontainer liveevent={liveevent} title={"Live events"} />
+           {events.length > 0  && <Swipercontainer liveevent={events} title={"Live events"} />}
             <View style={styles.areatwo}>
               <View style={styles.aboutview}>
                 <Text style={styles.abouttitle}>ABLE</Text>
               </View>
               <View>
+                
                 <Gridcont />
               </View>
             </View>
-            <Swipercontainer liveevent={yt} title={"Youtube videos"} />
+            <Swipercontainer liveevent={youtube} title={"Youtube videos"} />
             <StatusBar
               barStyle="light-content"
               hidden={false}
@@ -152,6 +154,8 @@ const styles = StyleSheet.create({
   },
   abouttext: {
     color: "#fff",
+    fontSize: 17,
+    // lineHeight: 10,
     textAlign: "justify",
   },
   rajesh: {

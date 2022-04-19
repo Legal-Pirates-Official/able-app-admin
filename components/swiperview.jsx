@@ -5,14 +5,19 @@ const {height, width} = Dimensions.get('window')
 
 const Swiperview = (props) => {
   const { live } = props;
+  console.log('====================================');
+  console.log(props,'ll');
+  console.log('====================================');
   return (
-    <View style={styles.slide1}>
-      <Image style={styles.image} source={{ uri: live.image }} />
+   <>
+   {live &&  <View style={styles.slide1}>
+      <Image style={styles.image} source={{ uri: live.thumbnail }} />
       <View style={styles.textview}>
         <Text style={styles.itemTitle}>{live.title}</Text>
         <Text style={styles.itemDescription}>{live.description}</Text>
       </View>
-    </View>
+    </View>}
+   </>
   );
 };
 
