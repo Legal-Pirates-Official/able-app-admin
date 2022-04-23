@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
 	},
 	headerText: {
 		position: 'relative',
-		color: '#000',
+		color: '#fff',
 		fontSize: 30,
 		fontWeight: 'bold',
 		textAlign: 'center',

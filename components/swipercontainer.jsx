@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
 	},
 	aboutheadcontainer: {
 		height: 65,
-		width: width - 10
+		width: width - 20
 	},
 	abouthead: {
 		color: '#fff',

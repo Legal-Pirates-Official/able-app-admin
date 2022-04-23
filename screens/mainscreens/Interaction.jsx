@@ -8,6 +8,7 @@ import {
   Dimensions,
 } from "react-native";
 import React, { useState } from "react";
+import { LinearGradient } from "expo-linear-gradient";
 import DateTimePickerModal from "react-native-modal-datetime-picker";
 import { getSlot, sendMail } from "../../axios/meet";
 const { width, height } = Dimensions.get("window");
@@ -42,9 +43,10 @@ const Interaction = () => {
     sendMail(email, name, dates, selectedTime, slots).then((res) => {});
   };
   return (
-    <View
+    <LinearGradient
+      colors={["#1D47BA", "#5F9BA9", "#A3D4DE", "#F6F9FB"]}
       style={{
-        justifyContent: "center",
+        // justifyContent: "center",
         alignItems: "center",
         flex: 1,
         paddingTop: 60,
@@ -53,58 +55,46 @@ const Interaction = () => {
     >
       <View
         style={{
-          width: width / 1.2,
-          backgroundColor: "#336DF5",
-          padding: 10,
-          borderRadius: 20,
-          height: height / 2.3,
-          shadowColor: "#fff",
-          shadowOffset: { width: 10, height: 10 },
-          shadowOpacity: 1,
-          shadowRadius: 3,
-          elevation: 5,
+          height: height / 4,
+          // borderColor: "#000",
+          // borderBottomWidth: 4,
+          // borderRadius: 10,
+          width: width - 40,
+          alignSelf: "center",
         }}
       >
-        <View
-          style={{
-            borderColor: "#fff",
-            borderBottomWidth: 4,
-            borderRadius: 10,
-            width: width / 2.3,
-            alignSelf: "center",
-          }}
-        >
+        <View style={{ top: 50 }}>
           <Text
             style={{
-              fontSize: 26,
+              fontSize: 30,
               fontWeight: "bold",
               color: "#fff",
-              alignSelf: "center",
+              marginBottom: 10,
+              // alignSelf: "center",
             }}
           >
             APPOINTMENT
           </Text>
-        </View>
-        <TouchableOpacity
-          style={{
-            borderColor: "#fff",
-            borderWidth: 2,
-            padding: 15,
-            paddingHorizontal: 20,
-            borderRadius: 30,
-            marginTop: 20,
-            width: width / 3,
-            alignSelf: "center",
-          }}
-          onPress={() => setDatePickerVisibility(true)}
-        >
-          <Text style={[styles.text, { color: "#fff" }]}>
-            {selectedTime
-              ? `${dates} ${selectedTime.time_slot}-${selectedTime.time_slot_am_pm}`
-              : "Pick a Date"}
+          <Text style={{ fontSize: 20, color: "#fff" }}>
+            Book your appointment now!
           </Text>
-        </TouchableOpacity>
-
+        </View>
+      </View>
+      <View
+        style={{
+          width: width / 1.2,
+          backgroundColor: "#F6F9FB",
+          padding: 10,
+          borderRadius: 20,
+          height: height / 2.3,
+          shadowColor: "#000",
+          shadowOffset: { width: 10, height: 10 },
+          shadowOpacity: 1,
+          shadowRadius: 3,
+          elevation: 5,
+          justifyContent: "space-evenly",
+        }}
+      >
         {isDatePickerVisible ? (
           <DateTimePickerModal
             isVisible={isDatePickerVisible}
@@ -136,39 +126,63 @@ const Interaction = () => {
             </ScrollView>
           </View>
         ) : null}
-        <TextInput
-          style={styles.input}
-          onChangeText={(text) => setEmail(text)}
-          value={email}
-          placeholder="Enter Email"
-          placeholderTextColor="#fff"
+        <View style={styles.inputcontainer}>
+          <Text>Enter Email</Text>
+          <TextInput
+            style={styles.input}
+            onChangeText={(text) => setEmail(text)}
+            value={email}
 
-          // keyboardType="numeric"
-        />
-        <TextInput
-          style={styles.input}
-          onChangeText={(text) => setName(text)}
-          value={name}
-          placeholder="Enter Name"
-          placeholderTextColor="#fff"
-          // keyboardType="numeric"
-        />
-        <TouchableOpacity
-          style={{
-            backgroundColor: "#fff",
-            padding: 15,
-            paddingHorizontal: 20,
-            borderRadius: 30,
-            marginTop: 20,
-            width: width / 2.9,
-            alignSelf: "center",
-          }}
-          onPress={() => handleMail()}
-        >
-          <Text style={[styles.text, { color: "#000" }]}>Send Request</Text>
-        </TouchableOpacity>
+            // keyboardType="numeric"
+          />
+        </View>
+        <View style={styles.inputcontainer}>
+          <Text>Enter Name</Text>
+          <TextInput
+            style={styles.input}
+            onChangeText={(text) => setName(text)}
+            value={name}
+            // keyboardType="numeric"
+          />
+        </View>
+        <View style={{ flexDirection: "row", width: '100%', justifyContent: "space-evenly" }}>
+          <TouchableOpacity
+            style={{
+              borderColor: "#155F9D",
+              borderWidth: 2,
+              padding: 15,
+              paddingHorizontal: 20,
+              borderRadius: 30,
+              // marginTop: 20,
+              width: width / 3.2,
+              alignSelf: "center",
+            }}
+            onPress={() => setDatePickerVisibility(true)}
+          >
+            <Text style={[styles.text, { color: "#155F9D" }]}>
+              {selectedTime
+                ? `${dates} ${selectedTime.time_slot}-${selectedTime.time_slot_am_pm}`
+                : "Pick a Date"}
+            </Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={{
+              backgroundColor: "#155F9D",
+              padding: 15,
+              paddingHorizontal: 20,
+              borderRadius: 30,
+              // marginTop: 20,
+              width: width / 3.2,
+              alignSelf: "center",
+              alignItems: 'center',
+            }}
+            onPress={() => handleMail()}
+          >
+            <Text style={[styles.text, { color: "#fff" }]}>Send Request</Text>
+          </TouchableOpacity>
+        </View>
       </View>
-    </View>
+    </LinearGradient>
     // </View>
   );
 };
@@ -176,23 +190,27 @@ const Interaction = () => {
 export default Interaction;
 
 const styles = StyleSheet.create({
+  inputcontainer: {
+    width: "80%",
+    alignSelf: "center",
+  },
   input: {
     height: 50,
-    margin: 12,
-    borderWidth: 1,
+    // margin: 12,
     padding: 10,
-    width: "80%",
+    borderBottomWidth: 1,
+    width: "100%",
     borderRadius: 10,
     alignSelf: "center",
-    borderColor: "#fff",
-    color: "#fff",
+    borderColor: "#000",
+    color: "#000",
   },
   timeslot: {
     // position: 'absolute',
     width: "80%",
     borderRadius: 10,
     elevation: 18,
-    backgroundColor: "#fff",
+    backgroundColor: "#000",
     marginVertical: 50,
     height: 300,
     // backgroundColor: "grey",
@@ -215,5 +233,5 @@ const styles = StyleSheet.create({
   btn: {
     textAlign: "center",
   },
-  text: { width: "100%", fontSize: 18, fontWeight: "bold", color: "#fff" },
+  text: { width: "100%", fontSize: 16, fontWeight: "bold", color: "#000", textAlign: "center" },
 });

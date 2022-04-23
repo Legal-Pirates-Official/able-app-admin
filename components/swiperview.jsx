@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image, Dimensions } from "react-native";
+import { StyleSheet, Text, View, Image, Dimensions, TouchableOpacity } from "react-native";
 import React from "react";
 
 const {height, width} = Dimensions.get('window')
@@ -9,8 +9,9 @@ const Swiperview = (props) => {
     <View style={styles.slide1}>
       <Image style={styles.image} source={{ uri: live.image }} />
       <View style={styles.textview}>
-        <Text style={styles.itemTitle}>{live.title}</Text>
-        <Text style={styles.itemDescription}>{live.description}</Text>
+      <TouchableOpacity style={styles.button}>
+        <Text style={styles.buttontext}>Join Now</Text>
+      </TouchableOpacity>
       </View>
     </View>
   );
@@ -22,7 +23,7 @@ const styles = StyleSheet.create({
   slide1: {
     justifyContent: "center",
     alignItems: "center",
-    width: width,
+    width: width/2,
     height: height / 3,
   },
   text: {
@@ -37,7 +38,7 @@ const styles = StyleSheet.create({
     left: 5,
   },
   image: {
-    width: width - 40,
+    width: width/2,
     height: height / 3,
     borderRadius: 10,
   },
@@ -63,4 +64,13 @@ const styles = StyleSheet.create({
     elevation: 5,
     marginLeft: 10,
   },
+  button:{
+    padding: 10,
+    backgroundColor: '#EEF6FF',
+    borderRadius: 10
+  },
+  buttontext:{
+    fontWeight: 'bold',
+    color:'#1D47BA'
+  }
 });

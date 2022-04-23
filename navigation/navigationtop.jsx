@@ -17,7 +17,7 @@ function Topnavigation() {
         <Tab.Navigator
             tabBarPosition="bottom"
             screenOptions={({route}) => ({
-                tabBarActiveTintColor: "#e91e63",
+                // tabBarActiveTintColor: "#e91e63",
                 swipeEnabled: false,
                 tabBarLabelStyle: {fontSize: 12},
                 // tabBarIndicator: () => null,
@@ -26,14 +26,15 @@ function Topnavigation() {
                     overflow: "hidden",
                 },
                 tabBarIndicatorStyle: {
-                    backgroundColor: "#e91e63",
+                    backgroundColor: "#1D47BA",
                     overflow: "hidden",
                     top: 0,
                     height: 4,
                 },
                 tabBarStyle: {
-                    backgroundColor: "#336DF5",
-                    width: "85%",
+                    backgroundColor: "#A3D4DE",
+                    width: "90%",
+                    height: "6%",
                     alignSelf: "center",
                     borderRadius: 20,
                     marginBottom: 10,
@@ -77,8 +78,8 @@ function Topnavigation() {
                         />
                     );
                 },
-                tabBarActiveTintColor: "#fff",
-                tabBarInactiveTintColor: "rgb(77, 77, 77)",
+                tabBarActiveTintColor: "#1D47BA",
+                tabBarInactiveTintColor: "#5F9BA9",
                 lazy: true,
                 tabBarShowLabel: false,
             })}

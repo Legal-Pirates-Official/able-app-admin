@@ -11,33 +11,28 @@ const CardsComponents = () => {
     });
   }, []);
 
-	return (
-		<>
-			<View style={styles.container}>
-				<View style={styles.viewContainer}>
-					<View style={styles.subContainer}></View>
-					<Image
-						style={styles.image}
-						source={{
-							uri: 'https://loveshayariimages.in/wp-content/uploads/2021/10/1080p-Latest-Whatsapp-Profile-Images-1.jpg'
-						}}
-					/>
-					<View>
-						<Text style={styles.text}>Dr.Rajesh Fernando</Text>
-						<Text style={styles.description}>
-							Marian James Rajesh Fernando, VP of Business Development &
-							Training at ACEnovation, was born on the most holy day of all
-							churchgoers, December 25th, bringing joy to his family and all
-							those who have been involved with him in two ways. Rajesh is a
-							trustworthy and kind individual, and those who have had the
-							pleasure of knowing him and working with him appreciate him and
-							want for more people like him.
-						</Text>
-					</View>
-				</View>
-			</View>
-		</>
-	);
+  return (
+    <View style={styles.container}>
+      <View style={styles.viewContainer}>
+        <View style={styles.subContainer}></View>
+        <Image
+          style={styles.image}
+          source={require("../../assets/3.jpg")}
+        />
+        <View style={{ width: "80%" }}>
+          <Text style={styles.text}>Dr.Rajesh Fernando</Text>
+          <Text style={styles.description}>
+            Marian James Rajesh Fernando, VP of Business Development & Training
+            at ACEnovation, was born on the most holy day of all churchgoers,
+            December 25th, bringing joy to his family and all those who have
+            been involved with him in two ways. Rajesh is a trustworthy and kind
+            individual, and those who have had the pleasure of knowing him and
+            working with him appreciate him and want for more people like him.
+          </Text>
+        </View>
+      </View>
+    </View>
+  );
 };
 
 export default CardsComponents;
@@ -47,7 +42,6 @@ const styles = StyleSheet.create({
     width: Dimensions.get("window").width,
     height: Dimensions.get("window").height,
     alignItems: "center",
-    backgroundColor: "#000",
     justifyContent: "center",
   },
   viewContainer: {
@@ -58,10 +52,10 @@ const styles = StyleSheet.create({
   },
   subContainer: {
     position: "absolute",
-    width: Dimensions.get("window").width - 20,
+    width: Dimensions.get("window").width - 50,
     height: 600,
     bottom: 0,
-    backgroundColor: "rgba(255,255,255,0.15)",
+    backgroundColor: "rgba(255,255,255,1)",
     elevation: 10,
 
     borderWidth: 1,
@@ -74,19 +68,23 @@ const styles = StyleSheet.create({
     width: 250,
     height: 250,
     borderRadius: 150,
+    zIndex: 0,
+    elevation: 12,
   },
   text: {
     fontSize: 20,
     fontWeight: "bold",
-    color: "#fff",
+    color: "#000",
     textAlign: "center",
     padding: 10,
+    elevation: 12,
   },
   description: {
     fontSize: 18,
-    color: "black",
+    color: "#000",
     paddingHorizontal: 20,
     textAlign: "justify",
     zIndex: 1,
+    elevation: 12,
   },
 });
