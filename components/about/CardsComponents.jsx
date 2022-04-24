@@ -81,15 +81,9 @@ const styles = StyleSheet.create({
   },
   description: {
     fontSize: 18,
-<<<<<<< HEAD
-    color: "white",
-    paddingHorizontal: 40,
-    textAlign: "center",
-=======
     color: "#000",
     paddingHorizontal: 20,
     textAlign: "justify",
->>>>>>> de1622910b4cecedce396a3145276c2e10a5dd5f
     zIndex: 1,
     elevation: 12,
   },
