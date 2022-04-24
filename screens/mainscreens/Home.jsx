@@ -103,9 +103,7 @@ const Home = ({ navigation }) => {
 		</>
 	);
 };
-
-export default Home
-
+export default Home;
 const styles = StyleSheet.create({
 	container: {
 		paddingTop: StatusBar.currentHeight,

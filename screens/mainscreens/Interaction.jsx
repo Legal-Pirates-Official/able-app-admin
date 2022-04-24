@@ -52,7 +52,10 @@ const Interaction = () => {
         paddingTop: 60,
         backgroundColor: "#000",
       }}
-    >
+    ><ScrollView  style={{
+      flex: 1,
+      
+    }}>
       <View
         style={{
           height: height / 4,
@@ -86,11 +89,12 @@ const Interaction = () => {
           backgroundColor: "#F6F9FB",
           padding: 10,
           borderRadius: 20,
-          height: height / 2.3,
+          // height: height / 2.3,
           shadowColor: "#000",
           shadowOffset: { width: 10, height: 10 },
           shadowOpacity: 1,
           shadowRadius: 3,
+          marginBottom:100,
           elevation: 5,
           justifyContent: "space-evenly",
         }}
@@ -145,7 +149,7 @@ const Interaction = () => {
             // keyboardType="numeric"
           />
         </View>
-        <View style={{ flexDirection: "row", width: '100%', justifyContent: "space-evenly" }}>
+        <View style={{ flexDirection: "row", width: '100%', justifyContent: "space-evenly" ,marginTop:50}}>
           <TouchableOpacity
             style={{
               borderColor: "#155F9D",
@@ -182,6 +186,7 @@ const Interaction = () => {
           </TouchableOpacity>
         </View>
       </View>
+      </ScrollView>
     </LinearGradient>
     // </View>
   );
@@ -207,10 +212,10 @@ const styles = StyleSheet.create({
   },
   timeslot: {
     // position: 'absolute',
-    width: "80%",
+    width: "100%",
     borderRadius: 10,
     elevation: 18,
-    backgroundColor: "#000",
+    backgroundColor: "#ffffff",
     marginVertical: 50,
     height: 300,
     // backgroundColor: "grey",
@@ -222,7 +227,7 @@ const styles = StyleSheet.create({
     // backgroundColor: '#f0f0f0',
     padding: 10,
     margin: 10,
-    borderColor: "#f0f0f0",
+    borderColor: "#000000",
     borderWidth: 3,
     justifyContent: "center",
     alignItems: "center",
