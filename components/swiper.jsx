@@ -11,12 +11,11 @@ const Swipercont = (props) => {
     <View style={styles.container}>
       <Swiper
         style={styles.wrapper}
-        showsButtons={false}
+        showsButtons={true}
         showsPagination={false}
         bounces={true}
-        loop={true}
-        autoplay={true}
-        autoplayTimeout={7}
+        loop={false}
+        autoplay={false}
       >
         <Swiperview live={datas[0]} />
         <Swiperview live={datas[1]} />
@@ -30,7 +29,7 @@ export default Swipercont;
 
 const styles = StyleSheet.create({
   container: {
-    width: width,
+    width: width- 40,
     alignItems: "center",
     height: height / 3,
   },

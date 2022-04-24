@@ -18,20 +18,24 @@ export const liveevent = [
       'https://pbs.twimg.com/profile_images/666828878996832257/kTwbgFKu_400x400.jpg'
   },
 ];
+
 export const yt = [
   {
+    id: 1,
     title: "Event one",
-    description: "This is event one",
+    link: "This is event one",
     image:
-      "../assests/1.jpg",
+    'https://i.pinimg.com/736x/17/91/aa/1791aa668192313cd4177c4c3ec99ff5.jpg',
   },
   {
+    id: 2,
     title: "Event two",
     description: "This is event two",
     image:
       "https://pbs.twimg.com/media/EBWM5CXU4AMVtrE.jpg",
   },
   {
+    id: 3,
     title: "Event three",
     description: "This is event three",
     image:
