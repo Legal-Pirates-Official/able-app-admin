@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     width: width / 1.5,
     marginHorizontal: 25,
     backgroundColor: "#fff",
-    height: height / 2.3,
+    height: height / 2.6,
     borderRadius: 20,
     alignItems: "center",
     justifyContent: "center",
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
   image: {
     position: "absolute",
     width: width / 1.5,
-    height: height / 2.3,
+    height: height / 2.6,
     borderRadius: 18,
   },
   button: {

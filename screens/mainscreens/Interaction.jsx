@@ -198,6 +198,7 @@ const styles = StyleSheet.create({
   inputcontainer: {
     width: "80%",
     alignSelf: "center",
+    marginTop: 25,
   },
   input: {
     height: 50,
@@ -205,7 +206,6 @@ const styles = StyleSheet.create({
     padding: 10,
     borderBottomWidth: 1,
     width: "100%",
-    borderRadius: 10,
     alignSelf: "center",
     borderColor: "#000",
     color: "#000",

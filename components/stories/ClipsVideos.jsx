@@ -9,6 +9,8 @@ import {
 } from 'react-native';
 import React from 'react';
 
+const { width, height } = Dimensions.get('window');
+
 const ClipsVideos = ({ navigation, clips }) => {
 	return (
 		<ScrollView style={styles.scrollView}>
@@ -83,7 +85,7 @@ const styles = StyleSheet.create({
 	},
 	storiesView: {
 		position: 'relative',
-		width: Dimensions.get('window').width,
+		width: width,
 		flexDirection: 'row',
 		flexWrap: 'wrap',
 		justifyContent: 'center',
@@ -92,12 +94,12 @@ const styles = StyleSheet.create({
 	},
 	cardStories: {
 		position: 'relative',
-		width: Dimensions.get('window').width / 1.05,
-		height: Dimensions.get('window').height / 3,
+		width: width / 1.7,
+		height: height / 3,
 		borderRadius: 30,
 		backgroundColor: '#1e1e1e',
 		marginBottom: 10,
-		marginHorizontal: 10,
+		marginHorizontal: 25,
 		alignItems: 'center',
 		justifyContent: 'flex-end',
 		shadowColor: '#fff',
@@ -111,8 +113,8 @@ const styles = StyleSheet.create({
 		zIndex: 1
 	},
 	storyThumbnail: {
-		position: 'absolute',
-		width: Dimensions.get('window').width / 1.05,
+		position: 'relative',
+		width: Dimensions.get('window').width / 1.7,
 		height: Dimensions.get('window').height / 3,
 		borderRadius: 30,
 		backgroundColor: '#1e1e1e',

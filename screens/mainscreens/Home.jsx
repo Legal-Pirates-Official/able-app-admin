@@ -157,7 +157,7 @@ const styles = StyleSheet.create({
 	},
 	aboutcontainer: {
 		width: width,
-		height: 550
+		height: 520
 		// backgroundColor: "#fff",
 	},
 	youtube: {}

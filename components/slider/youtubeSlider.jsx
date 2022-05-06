@@ -23,7 +23,7 @@ import {
           <View style={styles.listcontainer}>
             <View style={styles.slidercard}>
               <Image source={{ uri: item.image }} style={styles.image} />
-              <AntDesign name="youtube" size={70} color="#c4302b" />
+              <AntDesign name="youtube" size={50} color="#c4302b" />
             </View>
           </View>
         )}

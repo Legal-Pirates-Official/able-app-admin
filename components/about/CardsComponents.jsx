@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     elevation: 10,
 
     borderWidth: 1,
-    borderColor: "#336DF5",
+    borderColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
     borderRadius: 10,
