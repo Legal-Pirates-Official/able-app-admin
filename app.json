@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "Dr. Rajesh Fernando",
-    "slug": "able-client",
-    "version": "1.0.0",
+    "name": "ABLE",
+    "slug": "ABLE",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon1.png",
     "splash": {
@@ -20,14 +20,15 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.yuplez.able",
+      "versionCode": 2,
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/icon1.png",
         "backgroundColor": "#FFFFFF"
-      },
-      "package": "com.lohithsrk.ableclient"
+      }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/icon1.png"
     },
     "description": ""
   }

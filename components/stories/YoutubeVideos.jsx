@@ -12,6 +12,8 @@ import {
 } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 
+const {width, height} = Dimensions.get('window');
+
 import React, { useState, useEffect } from "react";
 
 const YoutubeVideos = ({ clips }) => {
@@ -65,8 +67,8 @@ const styles = StyleSheet.create({
   },
   storiesView: {
     position: "relative",
-    width: Dimensions.get("window").width,
-    height: Dimensions.get("window").height / 2.2,
+    width: width,
+    height: height / 2.2,
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "center",
@@ -75,8 +77,8 @@ const styles = StyleSheet.create({
   },
   cardStories: {
     position: "relative",
-    width: Dimensions.get("window").width / 1.05,
-    height: Dimensions.get("window").height / 3,
+    width: width / 1.4,
+    height: height / 4,
     borderRadius: 10,
     backgroundColor: "#1e1e1e",
     marginBottom: 10,
@@ -95,8 +97,8 @@ const styles = StyleSheet.create({
   },
   storyThumbnail: {
     position: "absolute",
-    width: Dimensions.get("window").width / 1.05,
-    height: Dimensions.get("window").height / 3,
+    width: width / 1.4,
+    height: height / 4,
     borderRadius: 10,
     backgroundColor: "#1e1e1e",
     alignItems: "center",
