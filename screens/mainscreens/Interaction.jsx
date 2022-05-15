@@ -25,9 +25,12 @@ const Interaction = () => {
 	};
 
 	const handleConfirm = (date) => {
-		var strng = date.toLocaleString();
-		setDates(strng.slice(0, strng.indexOf(',')));
-		getSlot(strng.slice(0, strng.indexOf(','))).then((res) => {
+		var strng = date.toLocaleDateString('en-US')
+		setDates(strng);
+		getSlot(strng).then((res) => {
+      console.log('====================================');
+      console.log(res,'ll');
+      console.log('====================================');
 			setSlots(JSON.parse(res[0].time_slot));
 		});
 		hideDatePicker();
