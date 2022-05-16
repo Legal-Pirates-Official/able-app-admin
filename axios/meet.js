@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 // const baseURL = "https://able-server.herokuapp.com";
-const baseURL = 'http://192.168.0.103:8080';
+const baseURL = 'http://192.168.0.101:8080';
 
 export const addSlot = async (dates, values, meetLink, email) => {
 	// var json = JSON.stringify(values);
@@ -22,6 +22,7 @@ export const addSlot = async (dates, values, meetLink, email) => {
 };
 
 export const getSlot = async (date) => {
+	console.log(date, 'p');
 	try {
 		console.log(date, 'p');
 		return await axios

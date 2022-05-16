@@ -14,6 +14,7 @@ import { getSlot, sendMail } from "../../axios/meet";
 const { width, height } = Dimensions.get("window");
 const Interaction = () => {
 	const [close, setClose] = useState(true);
+  const [request, setRequest] = useState(false);
 	const [dates, setDates] = useState('');
 	const [email, setEmail] = useState('');
 	const [name, setName] = useState('');
@@ -44,6 +45,9 @@ const Interaction = () => {
 
   const handleMail = () => {
     sendMail(email, name, dates, selectedTime, slots).then((res) => {});
+    setRequest(true);
+    
+    
   };
   return (
     <LinearGradient
@@ -152,6 +156,9 @@ const Interaction = () => {
             // keyboardType="numeric"
           />
         </View>
+       { request && <Text style={{ fontSize: 16, color: "#000000",textAlign:'center',marginTop:10 }}>
+            Kindly check your mail
+          </Text>}
         <View style={{ flexDirection: "row", width: '100%', justifyContent: "space-evenly" ,marginTop:50}}>
           <TouchableOpacity
             style={{
@@ -172,6 +179,7 @@ const Interaction = () => {
                 : "Pick a Date"}
             </Text>
           </TouchableOpacity>
+          
           <TouchableOpacity
             style={{
               backgroundColor: "#155F9D",
