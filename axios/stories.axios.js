@@ -1,7 +1,7 @@
-import axios from "axios";
+import axios from 'axios';
 
-const baseUrl = "https://able-server.herokuapp.com/";
-// const baseUrl = 'http://192.168.0.106:8080/';
+const baseurl = 'https://able-server.herokuapp.com/';
+// const baseurl = 'http://192.168.0.106:8080/';
 
 // {
 //     data: [
@@ -58,5 +58,5 @@ const baseUrl = "https://able-server.herokuapp.com/";
 // }
 
 export const getStories = () => {
-  return axios.get(`${baseUrl}admin/stories`);
+	return axios.get(`${baseurl}admin/stories`);
 };

@@ -1,13 +1,13 @@
 const axios = require('axios');
 
-// const baseURL = "https://able-server.herokuapp.com";
-const baseURL = 'http://192.168.0.103:8080';
+// const baseurl = "https://able-server.herokuapp.com";
+const baseurl = 'http://192.168.0.103:8080';
 
 export const addSlot = async (dates, values, meetLink, email) => {
 	// var json = JSON.stringify(values);
 	try {
 		return await axios
-			.post(`${baseURL}/meet/addslot`, {
+			.post(`${baseurl}/meet/addslot`, {
 				time_slot: values,
 				date: dates,
 				meetLink: meetLink,
@@ -25,7 +25,7 @@ export const getSlot = async (date) => {
 	try {
 		console.log(date, 'p');
 		return await axios
-			.post(`${baseURL}/meet/getslot/`, {
+			.post(`${baseurl}/meet/getslot/`, {
 				date
 			})
 			.then((res) => {
@@ -42,7 +42,7 @@ export const getSlot = async (date) => {
 export const sendMail = async (email, name, date, timeslot, slots) => {
 	try {
 		return await axios
-			.post(`${baseURL}/meet/mail/`, {
+			.post(`${baseurl}/meet/mail/`, {
 				email,
 				name,
 				date,
