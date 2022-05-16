@@ -1,7 +1,6 @@
-const axios = require('axios');
+const axios = require("axios");
+import { baseurl } from '../environment';
 
-// const baseurl = "https://able-server.herokuapp.com";
-const baseurl = 'http://192.168.0.103:8080';
 
 export const addSlot = async (dates, values, meetLink, email) => {
 	// var json = JSON.stringify(values);

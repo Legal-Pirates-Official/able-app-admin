@@ -1,4 +1,5 @@
 const axios = require('axios');
+import { baseurl } from '../environment';
 
 // const aboutforms = [
 //     about_description,
@@ -6,8 +7,6 @@ const axios = require('axios');
 //     card_description,
 //     card_image,
 // ];
-const baseurl = 'https://able-server.herokuapp.com';
-// const baseurl = 'http://192.168.0.103:8080';
 
 export const getAbout = async (values) => {
 	return await axios.get(`${baseurl}/admin/about`);

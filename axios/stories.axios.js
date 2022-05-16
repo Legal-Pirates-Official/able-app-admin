@@ -1,7 +1,6 @@
 import axios from 'axios';
+import { baseurl } from '../environment';
 
-const baseurl = 'https://able-server.herokuapp.com/';
-// const baseurl = 'http://192.168.0.106:8080/';
 
 // {
 //     data: [

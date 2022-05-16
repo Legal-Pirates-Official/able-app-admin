@@ -1,7 +1,6 @@
 import axios from 'axios';
+import { baseurl } from '../environment';
 
-const baseurl = 'https://able-server.herokuapp.com';
-// const baseurl = 'http://192.168.43.30:8080';
 
 export const aboutget = () => axios.get(`${baseurl}/admin/home/about`);
 export const getEvents = () => axios.get(`${baseurl}/admin/home/events`);
