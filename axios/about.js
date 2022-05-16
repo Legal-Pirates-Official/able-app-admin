@@ -7,7 +7,9 @@ const axios = require('axios');
 //     card_image,
 // ];
 // const baseURL = "https://able-server.herokuapp.com";
-const baseURL = 'http://172.16.7.176:8080';
+// const baseURL = 'http://172.16.7.176:8080';
+const baseURL = 'http://192.168.43.30:8080';
+
 
 export const getAbout = async (values) => {
 	return await axios.get(`${baseURL}/admin/about`);
