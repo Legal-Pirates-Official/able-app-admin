@@ -22,6 +22,8 @@ import { Octicons } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
 const { width, height } = Dimensions.get("window");
 
+
+
 const Home = ({ navigation }) => {
     const [about, setAbout] = useState([]);
     const [events, setEvents] = useState([]);
@@ -38,7 +40,6 @@ const Home = ({ navigation }) => {
     const fetchLiveEvents = () =>
         getEvents().then((res) => {
             setEvents(res.data);
-            console.log(res.data);
         });
 
     const fetchYoutube = () =>

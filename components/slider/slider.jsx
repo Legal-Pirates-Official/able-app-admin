@@ -6,6 +6,7 @@ import {
   Dimensions,
   Image,
   TouchableOpacity,
+  Linking
 } from "react-native";
 import React from "react";
 
@@ -22,8 +23,8 @@ const Slider = ({ data }) => {
       renderItem={({ item, index }) => (
         <View style={styles.listcontainer}>
           <View style={styles.slidercard}>
-            <Image source={{ uri: item.image }} style={styles.image} />
-            <TouchableOpacity style={styles.button}>
+            <Image source={{ uri: item.thumbnail }} style={styles.image} />
+            <TouchableOpacity style={styles.button} onPress={() => Linking.openURL(item.event_url)}>
               <Text style={styles.buttontext}>Join Now</Text>
             </TouchableOpacity>
           </View>
