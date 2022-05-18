@@ -21,18 +21,10 @@ export const addSlot = async (dates, values, meetLink, email) => {
 };
 
 export const getSlot = async (date) => {
-<<<<<<< HEAD
 	try {
 		console.log(date, 'p');
 		return await axios
 			.post(`${baseurl}/meet/getslot/`, {
-=======
-	console.log(date, 'p');
-	try {
-		console.log(date, 'p');
-		return await axios
-			.post(`${baseURL}/meet/getslot/`, {
->>>>>>> 308eb6cbc267760119aa7b494a11e134e548d3c6
 				date
 			})
 			.then((res) => {
