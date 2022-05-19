@@ -5,9 +5,6 @@ const {height, width} = Dimensions.get('window')
 
 const Swiperview = (props) => {
   const { live } = props;
-  console.log('====================================');
-  console.log(props,'ll');
-  console.log('====================================');
   return (
    <>
    {live &&  <View style={styles.slide1}>
