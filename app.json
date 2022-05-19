@@ -22,6 +22,7 @@
     "android": {
       "package": "com.yuplez.able",
       "versionCode": 4,
+      "versionName": "4",
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon1.png",
         "backgroundColor": "#FFFFFF"
