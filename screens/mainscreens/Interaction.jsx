@@ -27,6 +27,7 @@ const Interaction = () => {
 
 	const handleConfirm = (date) => {
 		var strng = date.toLocaleDateString('en-US')
+    console.log('dd');
 		setDates(strng);
 		getSlot(strng).then((res) => {
       console.log('====================================');
