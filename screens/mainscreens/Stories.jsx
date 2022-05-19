@@ -16,8 +16,6 @@ const Stories = ({ navigation }) => {
     getStories().then((res) => {
       setMiniClips(res.data.filter((clip) => clip.video_type === "Mini clip"));
       setYoutubeClips(res.data.filter((clip) => clip.video_type === "Youtube"));
-      console.log(miniClips);
-      console.log(youtubeClips);
     });
   }, []);
 
