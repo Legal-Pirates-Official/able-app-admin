@@ -1,6 +1,5 @@
-import axios from 'axios';
-import { baseurl } from '../environment';
-
+import axios from "axios";
+import { baseurl } from "../environment";
 
 // {
 //     data: [
@@ -57,5 +56,5 @@ import { baseurl } from '../environment';
 // }
 
 export const getStories = () => {
-	return axios.get(`${baseurl}admin/stories`);
+  return axios.get(`${baseurl}admin/stories`);
 };
