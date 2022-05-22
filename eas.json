@@ -13,6 +13,10 @@
     "production": {}
   },
   "submit": {
-    "production": {}
+    "production": {
+      "android": {
+        "serviceAccountKeyPath" : "./fe1965fb-9b74-43a1-8c64-634abe773fd4-3daafe12f3e7409f9f687684611dce61.aab"
+      }
+    }
   }
 }
